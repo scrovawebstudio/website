@@ -1,0 +1,50 @@
+@import '../../../../styles.scss';
+
+.about-me-section {
+    padding: 80px 0;
+    background: white;
+    color: $primary-green;
+
+    .about-me-wrap {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        justify-content: center;
+    }
+
+    .about-image {
+        max-width: 420px;
+        width: 100%;
+        position: relative;
+
+        img {
+            width: 100%;
+            box-shadow: 10px 10px 0px 0px $primary-golden;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 50px;
+        }
+    }
+
+    .about-text {
+        max-width: 520px;
+        text-align: center;
+
+        h2 {
+            font-family: $heading-font;
+            font-size: 40px;
+            font-weight: 600;
+            color: $primary-green;
+            margin: 0 0 12px 0;
+        }
+
+        p {
+            font-family: $primary-text-font;
+            color: #555;
+            margin: 0 auto;
+            line-height: 1.6;
+            max-width: 420px;
+        }
+    }
+}

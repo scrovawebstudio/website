@@ -1,0 +1,47 @@
+@import '../../../styles.scss';
+
+.navbar-brand {
+    color: $primary-golden;
+}
+
+.navbar-brand {
+    font-family: $heading-font;
+    font-weight: 600;
+    font-size: 28px;
+    min-height: 80px;
+}
+
+.nav-item {
+    padding: 0 16px;
+}
+
+.nav-link {
+    color: white;
+    padding: 0 16px;
+}
+
+.nav-link:hover {
+    color: $primary-golden;
+}
+
+.nav-link:active {
+    color: $primary-golden;
+}
+
+.get-started-btn {
+    // font-family: $button-font;
+    color: $primary-green;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: solid 2px white;
+    background-color: white;
+    padding: 18px 36px;
+    line-height: 1em;
+    border-radius: 50px;
+}
+
+.get-started-btn:hover {
+    background-color: $primary-green;
+    color: white;
+}

@@ -1,0 +1,18 @@
+@import '../../../styles.scss';
+
+.site-footer {
+  background: white;
+  padding: 18px 0;
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .copyright {
+    font-family: $primary-text-font;
+    color: $primary-green;
+    font-size: 16px;
+  }
+}

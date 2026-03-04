@@ -1,0 +1,64 @@
+@import '../../../../styles.scss';
+
+.services-section {
+    background: $background-offwhite;
+    padding: 80px 40px;
+    color: $primary-green;
+    font-family: $primary-text-font;
+    font-weight: 400;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        font-family: $heading-font;
+        font-weight: 600;
+    }
+
+    p.lead {
+        color: #555;
+        max-width: 700px;
+        margin: 0 auto 3rem;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .service-item {
+            padding: 50px;
+            border-right: 1px solid #e5e5e5;
+
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+                color: $primary-green;
+                font-family: $heading-font;
+                font-weight: 600;
+            }
+
+            .accent {
+                display: block;
+                width: 40px;
+                height: 3px;
+                background: $primary-golden;
+                margin: 0.5rem 0 1rem 0;
+            }
+
+            p {
+                color: #555;
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+        }
+
+        .service-item:nth-child(3n) {
+            border-right: none;
+        }
+
+        .service-item:nth-child(-n+3) {
+            border-bottom: 1px solid #e5e5e5;
+        }
+    }
+}

@@ -1,0 +1,148 @@
+@import '../../../../styles.scss';
+
+/* about page styles */
+.about-hero {
+    // background: $primary-green;
+    color: white;
+    position: relative;
+    overflow: visible;
+    padding: 120px 0 160px 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $primary-green;
+        transform: skewY(-6deg);
+        transform-origin: top left;
+        z-index: -1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    h1 {
+        font-family: $heading-font;
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    p {
+        font-family: $primary-text-font;
+        font-size: 18px;
+        max-width: 700px;
+        line-height: 1.6;
+    }
+
+}
+
+.about-image {
+    object-fit: cover;
+    width: 1200px;
+    height: 500px;
+    border-radius: 50px;
+}
+
+.about-body {
+    padding: 80px 0;
+
+    .who-i-am {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        .icons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+
+            a {
+                color: $primary-golden;
+                font-size: 24px;
+            }
+        }
+
+        h2 {
+            font-family: $heading-font;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: $primary-green;
+        }
+
+        p {
+            font-family: $primary-text-font;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+    }
+
+    .our-journey {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+
+        .text {
+            h2 {
+                font-family: $heading-font;
+                font-size: 32px;
+                font-weight: 600;
+                color: $primary-green;
+                margin-bottom: 24px;
+            }
+
+            p {
+                font-family: $primary-text-font;
+                font-size: 16px;
+                line-height: 1.6;
+                color: #555;
+            }
+        }
+
+        .image-wrap {
+            position: relative;
+
+            img {
+                width: 100%;
+                border-radius: 28px;
+                box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.08);
+                border: 6px solid transparent;
+                display: block;
+                height: auto;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: -18px;
+                top: 0;
+                width: 12px;
+                height: 100%;
+                background: $primary-golden;
+                border-radius: 8px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: -18px;
+                bottom: -18px;
+                height: 12px;
+                background: $primary-golden;
+                border-radius: 0 0 12px 0;
+            }
+        }
+    }
+}

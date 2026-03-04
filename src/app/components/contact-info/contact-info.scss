@@ -1,0 +1,88 @@
+@import '../../../styles.scss';
+
+.contact-cta {
+  background: $primary-green;
+  color: white;
+  padding: 100px 40px;
+  text-align: center;
+
+  h2 {
+    font-family: $heading-font;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .lead {
+    font-family: $primary-text-font;
+    color: rgba(255,255,255,0.9);
+    max-width: 720px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+  }
+
+  .cta-button {
+    margin: 28px 0 42px;
+  }
+
+  /* make this Get Started match the nav button style */
+  .get-started-btn {
+    background-color: $primary-golden;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .get-started-btn:hover {
+    background-color: #d8831c;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255,255,255);
+    margin: 36px auto;
+    max-width: 1200px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 24px;
+  }
+
+  .contact-col {
+    text-align: left;
+    padding: 0 24px;
+
+    h4 {
+      font-family: $heading-font;
+      color: white;
+      font-size: 20px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    a, .location {
+      display: block;
+      font-family: $primary-text-font;
+      color: lighten($primary-golden, 10%);
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 6px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-col { text-align: center; }
+  }
+}

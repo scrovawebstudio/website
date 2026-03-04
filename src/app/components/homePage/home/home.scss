@@ -1,0 +1,83 @@
+@import '../../../../styles.scss';
+
+.homepage-bg {
+    // position: relative;          // establish stacking context
+    overflow: visible; // keep children visible
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: $primary-green;
+        transform-origin: top left; // top/right/bottom/left = 0
+        /* angle the background – tweak the degree as needed */
+        transform: skewY(-10deg); // negative skew makes the bottom edge slant
+        z-index: -1; // put it behind the content
+        max-height: 82vh;
+    }
+}
+
+.container {
+    font-family: $primary-text-font;
+    max-width: 1240px;
+}
+
+main {
+    padding: 80px 0px 100px 0px;
+    color: white;
+    gap: 80px;
+    display: flex;
+    align-items: center;
+    min-height: 75vh;
+}
+
+h1 {
+    font-size: 54px;
+    font-size: 3.375rem;
+    font-weight: normal;
+    font-family: 'IBM Plex Serif';
+    line-height: 1.3em;
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+img {
+    box-shadow: 10px 10px 0px 0px $primary-golden;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 50px;
+}
+
+.left-section {
+    max-width: 60%;
+    width: 100%;
+}
+
+.right-section {
+    max-width: 40%;
+    width: 100%;
+}
+
+/* homepage-specific get started button */
+.button-wrapper {
+    margin-top: 32px;
+    text-align: left;
+}
+
+.homepage-btn {
+    background-color: $primary-golden;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.homepage-btn:hover {
+    background-color: #d8831c;
+}

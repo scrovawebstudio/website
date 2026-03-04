@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+
+.scroll-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: $primary-golden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.scroll-top:hover {
+  background: darken($primary-golden, 8%);
+}
+
+.scroll-top svg { display: block; }
