@@ -1,4 +1,4 @@
-@import '../styles.scss';
+@use '../styles.scss' as *;
 
 .header-bg{
   background-color: $primary-green;
