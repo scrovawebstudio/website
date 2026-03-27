@@ -2,7 +2,6 @@
 
 /* about page styles */
 .about-hero {
-    // background: $primary-green;
     color: white;
     position: relative;
     overflow: visible;
@@ -72,7 +71,7 @@
 
         h2 {
             font-family: $heading-font;
-            font-size: 32px;
+            font-size: 40px;
             font-weight: 600;
             margin-bottom: 16px;
             color: $primary-green;
@@ -82,7 +81,7 @@
             font-family: $primary-text-font;
             font-size: 16px;
             line-height: 1.6;
-            color: #ffffff;
+            color: #555;
         }
     }
 
@@ -96,7 +95,7 @@
         .text {
             h2 {
                 font-family: $heading-font;
-                font-size: 32px;
+                font-size: 40px;
                 font-weight: 600;
                 color: $primary-green;
                 margin-bottom: 24px;
