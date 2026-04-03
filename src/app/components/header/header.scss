@@ -1,6 +1,6 @@
 @use '../../../styles.scss' as *;
 
-.navbar-brand {
+.navbar-brand, .nav-link:hover, .nav-link:active, .nav-link.active {
     color: $primary-golden;
 }
 
@@ -20,16 +20,7 @@
     padding: 0 16px;
 }
 
-.nav-link:hover {
-    color: $primary-golden;
-}
-
-.nav-link:active {
-    color: $primary-golden;
-}
-
 .get-started-btn {
-    // font-family: $button-font;
     color: $primary-green;
     font-weight: 500;
     font-size: 15px;
@@ -39,6 +30,7 @@
     padding: 18px 36px;
     line-height: 1em;
     border-radius: 50px;
+    text-decoration: none;
 }
 
 .get-started-btn:hover {

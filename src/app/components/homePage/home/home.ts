@@ -8,10 +8,11 @@ import { Testimonials } from '../testimonials/testimonials';
 import { ContactInfo } from '../../contact-info/contact-info';
 import { Copyright } from '../../copyright/copyright';
 import { ScrollTop } from '../../scroll-top/scroll-top';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-home',
-  imports: [Services, About, WhyUs, AboutMe, Testimonials],
+  imports: [Services, About, WhyUs, AboutMe, Testimonials, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
