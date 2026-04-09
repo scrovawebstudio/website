@@ -12,7 +12,7 @@
     position: absolute;
     inset: 0;                  // top/right/bottom/left = 0
     background-color: $primary-green;
-    transform: translateY(-450px);   
+    transform: translateY(-450px);
     z-index: -1;               // put it behind the content
   }
 
@@ -68,6 +68,58 @@
                 color: $primary-golden;
                 font-weight: 500;
             }
+        }
+    }
+}
+
+// Responsive styles
+@media (max-width: ($mobile - 1px)) {
+    .why-us-section {
+        padding: 40px 20px 80px 20px;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p.lead {
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .why-us-card {
+            padding: 30px 20px;
+            margin-top: 20px;
+        }
+
+        .advantage-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .advantage-item {
+            text-align: center;
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (max-width: ($tablet - 1px)) and (min-width: $mobile) {
+    .why-us-section {
+        padding: 60px 20px 100px 20px;
+
+        .why-us-card {
+            padding: 40px;
+        }
+
+        .advantage-grid {
+            gap: 40px;
         }
     }
 }

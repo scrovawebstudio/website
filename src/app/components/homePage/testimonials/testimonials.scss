@@ -59,15 +59,51 @@
     }
   }
 
-  @media (max-width: 900px) {
+  // Responsive styles
+  @media (max-width: ($mobile - 1px)) {
+    padding: 0 20px 60px 20px;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p.lead {
+      font-size: 0.9rem;
+    }
+
     .testimonial-grid {
       grid-template-columns: 1fr;
+      gap: 30px;
     }
 
     .testimonial-item {
-      padding: 24px 18px;
+      padding: 20px;
+
+      .quote {
+        font-size: 2rem;
+      }
+
+      .testimonial-text {
+        font-size: 0.9rem;
+      }
+
+      .author {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: ($tablet - 1px)) and (min-width: $mobile) {
+    .testimonial-grid {
+      gap: 40px;
     }
 
-    h2 { font-size: 32px; }
+    .testimonial-item {
+      padding: 24px 30px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
   }
 }

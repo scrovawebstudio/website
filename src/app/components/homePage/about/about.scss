@@ -78,3 +78,62 @@
         }
     }
 }
+
+// Responsive styles
+@media (max-width: ($mobile - 1px)) {
+    .about-section {
+        padding: 40px 20px;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p.lead {
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-grid {
+            flex-direction: column;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .about-image-wrap {
+            max-width: 100%;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .about-text {
+            max-width: 100%;
+            text-align: center;
+
+            h3 {
+                font-size: 1.75rem;
+            }
+
+            .read-more-btn {
+                padding: 12px 30px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: ($tablet - 1px)) and (min-width: $mobile) {
+    .about-section {
+        padding: 60px 20px;
+
+        .about-grid {
+            gap: 40px;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+        }
+    }
+}

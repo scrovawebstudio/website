@@ -1,35 +1,42 @@
 <header class="container">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-end w-100">
-        <div class="w-20">
-            <a class="navbar-brand" href="#">sujitgajare</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark w-100">
+        <div class="navbar-top">
+            <button class="navbar-toggler" type="button" (click)="toggleMenu()" [class.open]="isMenuOpen" [attr.aria-expanded]="isMenuOpen"
+                aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span class="bar bar1"></span>
+                    <span class="bar bar2"></span>
+                    <span class="bar bar3"></span>
+                </span>
             </button>
-        </div>
-        <div class="collapse navbar-collapse w-80 justify-content-center" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/home" routerLinkActive="active">Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/about" routerLinkActive="active">Abouts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <div class="w-20">
-            <button class="btn btn-primary get-started-btn">
+            <a class="navbar-brand" href="#">sujitgajare</a>
+            <button class="btn btn-primary get-started-btn d-lg-none">
                 <span routerLink="/contact">Get Started</span>
             </button>
         </div>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent"
+            [class.show]="isMenuOpen">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active" (click)="closeMenu()">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="closeMenu()">Abouts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/services" routerLinkActive="active" (click)="closeMenu()">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <button class="btn btn-primary get-started-btn d-none d-lg-block">
+            <span routerLink="/contact">Get Started</span>
+        </button>
     </nav>
+    <div class="nav-backdrop" [class.active]="isMenuOpen" (click)="toggleMenu()"></div>
 
 </header>

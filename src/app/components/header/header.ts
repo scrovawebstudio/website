@@ -8,5 +8,13 @@ import { RouterLink, RouterLinkActive } from "@angular/router";
   styleUrl: './header.scss',
 })
 export class Header {
+  isMenuOpen = false;
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
 }

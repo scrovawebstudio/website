@@ -85,3 +85,61 @@ img {
 .text-golden {
     color: $primary-golden;
 }
+
+// Responsive styles
+@media (max-width: ($mobile - 1px)) {
+    .homepage-bg::before {
+        max-height: 95vh;
+    }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px 60px 20px;
+        gap: 40px;
+        min-height: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .left-section {
+        max-width: 100%;
+        order: 2;
+    }
+
+    .right-section {
+        max-width: 100%;
+        order: 1;
+    }
+
+    img {
+        max-width: 70%;
+        height: auto;
+    }
+
+    .button-wrapper {
+        text-align: center;
+    }
+}
+
+@media (max-width: ($tablet - 1px)) and (min-width: $mobile) {
+    main {
+        gap: 40px;
+        padding: 60px 20px 80px 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .left-section {
+        max-width: 65%;
+    }
+
+    .right-section {
+        max-width: 35%;
+    }
+}

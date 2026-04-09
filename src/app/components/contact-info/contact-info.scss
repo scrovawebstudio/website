@@ -82,8 +82,53 @@
     }
   }
 
-  @media (max-width: 900px) {
-    .contact-grid { grid-template-columns: 1fr; }
-    .contact-col { text-align: center; }
+  // Responsive styles
+  @media (max-width: ($mobile - 1px)) {
+    padding: 60px 20px;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .lead {
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      margin: 20px 0 30px;
+    }
+
+    .get-started-btn {
+      padding: 12px 24px;
+      font-size: 14px;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding-top: 20px;
+    }
+
+    .contact-col {
+      text-align: center;
+      padding: 0;
+
+      h4 {
+        font-size: 1.25rem;
+      }
+
+      a, .location {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: ($tablet - 1px)) and (min-width: ($mobile)) {
+    padding: 80px 30px;
+
+    .contact-grid {
+      gap: 20px;
+    }
   }
 }

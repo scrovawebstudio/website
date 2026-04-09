@@ -146,3 +146,84 @@
         }
     }
 }
+
+// Responsive styles
+@media (max-width: ($mobile - 1px)) {
+    .about-hero {
+        padding: 80px 20px 100px 20px;
+        height: auto;
+
+        h1 {
+            font-size: 2.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .about-image {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .about-body {
+        padding: 40px 0;
+
+        .who-i-am {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 50px 20px;
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .icons {
+                justify-content: center;
+            }
+        }
+
+        .our-journey {
+            margin-top: 40px;
+            grid-template-columns: 1fr;
+            gap: 30px;
+
+            .text h2 {
+                font-size: 1.75rem;
+            }
+
+            .text p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (max-width: ($tablet - 1px)) and (min-width: $mobile) {
+    .about-hero {
+        padding: 100px 20px 120px 20px;
+
+        h1 {
+            font-size: 2.75rem;
+        }
+    }
+
+    .about-body {
+        padding: 60px 0;
+
+        .who-i-am {
+            gap: 40px;
+            padding: 70px 20px;
+        }
+
+        .our-journey {
+            gap: 40px;
+        }
+    }
+}

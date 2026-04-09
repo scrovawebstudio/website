@@ -9,6 +9,11 @@ $primary-text-font: 'Inter', sans-serif;
 $heading-font: 'IBM Plex Serif', serif;
 $button-font: 'Poppins', sans-serif;
 
+// Responsive breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1200px;
+
 body {
     background-color: $background-offwhite;
 }

@@ -84,18 +84,70 @@
   margin: 0;
 }
 
-@media (max-width: 900px) {
-  .service-flex {
-    flex-direction: column;
-    gap: 16px;
-  }
-  .service-title {
-    font-size: 32px;
-    margin-bottom: 8px;
-  }
-  .service-strong {
-    font-size: 22px;
-  }
+// Responsive styles
+@media (max-width: ($mobile - 1px)) {
+    .services-section {
+        padding: 80px 20px 100px 20px;
+        height: auto;
+
+        h1 {
+            font-size: 2.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .service-list {
+        gap: 32px;
+    }
+
+    .service-item {
+        padding: 24px 0;
+    }
+
+    .service-flex {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .service-title {
+        flex: none;
+        font-size: 1.75rem;
+        margin-bottom: 8px;
+    }
+
+    .service-strong {
+        font-size: 1.25rem;
+    }
+
+    .service-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: ($tablet - 1px)) and (min-width: $mobile) {
+    .services-section {
+        padding: 100px 20px 120px 20px;
+
+        h1 {
+            font-size: 2.75rem;
+        }
+    }
+
+    .service-flex {
+        gap: 24px;
+    }
+
+    .service-title {
+        flex: 0 0 250px;
+        font-size: 2rem;
+    }
+
+    .service-strong {
+        font-size: 1.5rem;
+    }
 }
 
 .head-seperator {

@@ -24,3 +24,18 @@
 }
 
 .scroll-top svg { display: block; }
+
+// Responsive styles
+@media (max-width: ($mobile - 1px)) {
+    .scroll-top {
+        right: 16px;
+        bottom: 16px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .scroll-top svg {
+        width: 14px;
+        height: 14px;
+    }
+}

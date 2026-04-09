@@ -48,3 +48,50 @@
         }
     }
 }
+
+// Responsive styles
+@media (max-width: ($mobile - 1px)) {
+    .about-me-section {
+        padding: 40px 20px;
+
+        .about-me-wrap {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-image {
+            max-width: 100%;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .about-text {
+            max-width: 100%;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (max-width: ($tablet - 1px)) and (min-width: $mobile) {
+    .about-me-section {
+        padding: 60px 20px;
+
+        .about-me-wrap {
+            gap: 40px;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+        }
+    }
+}
