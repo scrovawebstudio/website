@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contactpage.scss',
 })
 export class Contactpage {
-  contactForm: any;
+  contactForm: FormGroup;
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
@@ -40,10 +40,8 @@ export class Contactpage {
 
   sendWhatsApp() {
     const { name, email, message } = this.contactForm.value;
-
     const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
     const phone = '918149862034';
-
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   }
 }

@@ -86,6 +86,53 @@
         }
     }
 
+    /* Tech Stack — Fix #11 */
+    .tech-stack {
+        padding: 60px 40px;
+        text-align: center;
+
+        h2 {
+            font-family: $heading-font;
+            font-size: 32px;
+            font-weight: 600;
+            color: $primary-green;
+            margin-bottom: 40px;
+        }
+
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 80px;
+
+            img {
+                width: 48px;
+                height: 48px;
+                object-fit: contain;
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.15);
+                }
+            }
+
+            span {
+                font-family: $primary-text-font;
+                font-size: 13px;
+                color: #555;
+                font-weight: 500;
+            }
+        }
+    }
+
     .our-journey {
         margin-top: 80px;
         display: grid;
@@ -186,6 +233,18 @@
 
             .icons {
                 justify-content: center;
+            }
+        }
+
+        .tech-stack {
+            padding: 40px 20px;
+
+            .tech-grid {
+                gap: 24px;
+            }
+
+            .tech-item {
+                width: 64px;
             }
         }
 
